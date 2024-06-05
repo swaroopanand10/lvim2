@@ -106,6 +106,27 @@ return {
 				["<leader>jm"] = { name = "+multicursors" },
 				["<leader>h"] = { name = "+harpoon" },
 				["<leader>i"] = { name = "+neorg" },
+				["<leader>jy"] = {
+					name = "Yank",
+					f = { "<cmd>%y+<cr>", "Copy Whole File" },
+					r = {
+						function()
+							local path = vim.fn.expand("%")
+							vim.fn.setreg("+", path)
+							vim.notify('Copied "' .. path .. '" to the clipboard!')
+						end,
+						"Copy Relative Path",
+					},
+					p = {
+						function()
+							local path = vim.fn.expand("%:p")
+							vim.fn.setreg("+", path)
+							vim.notify('Copied "' .. path .. '" to the clipboard!')
+						end,
+						"Copy Absolute Path",
+					},
+					-- g = { '<cmd>lua require"gitlinker".get_buf_range_url()<cr>', "Copy Git URL" },
+				},
 			},
 		},
 	},
@@ -289,5 +310,4 @@ return {
 			lualine.setup(config)
 		end,
 	},
-
 }
