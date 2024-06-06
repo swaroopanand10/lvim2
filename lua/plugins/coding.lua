@@ -114,4 +114,12 @@ return {
 			end,
 		},
 	},
+	{
+		"dhruvasagar/vim-table-mode",
+		cmd = "TableModeToggle",
+		config = function()
+			vim.g.table_mode_syntax = 0
+			vim.g.table_mode_corner_corner = "+"
+		end,
+	},
 }
