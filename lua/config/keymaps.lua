@@ -27,6 +27,10 @@ map("n", "<A-j>", "<C-w>j", opts)
 map("n", "<A-k>", "<C-w>k", opts)
 map("n", "<A-l>", "<C-w>l", opts)
 
+-- Move to line beginning and end
+map({ 'n', 'v', 'x' }, 'gl', '$', { desc = 'End of line' })
+map({ 'n', 'v', 'x' }, 'gh', '^', { desc = 'Beginning of line' })
+
 -- Stopping lsp
 map("n", "<leader>jL", "<cmd>LspStop<cr>", { desc = "stop lsp", silent = true })
 
