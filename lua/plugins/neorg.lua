@@ -130,6 +130,7 @@ return {
 						cf = "~/notes/cf",
 						linux = "~/notes/linux",
 						projects = "~/notes/projects",
+						['42'] = "~/notes/42",
 					},
 					default_workspace = nil, -- doing this is best as it puts us in workspace of current dir
 					index = "index.norg",
