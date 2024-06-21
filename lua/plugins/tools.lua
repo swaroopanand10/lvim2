@@ -209,6 +209,12 @@ return {
 	{
 		"akinsho/toggleterm.nvim",
 		config = function()
+			-- deleting these keybinds(setted be lazyvim) for terminal mode as these are used in actual terminal
+			vim.keymap.del("t", "<C-j>")
+			vim.keymap.del("t", "<C-k>")
+			vim.keymap.del("t", "<C-l>")
+			vim.keymap.del("t", "<C-h>")
+
 			_G.set_terminal_keymaps = function()
 				local opts = { noremap = true }
 				vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
@@ -218,6 +224,7 @@ return {
 				vim.api.nvim_buf_set_keymap(0, "t", "<m-k>", [[<C-\><C-n><C-W>k]], opts)
 				vim.api.nvim_buf_set_keymap(0, "t", "<m-l>", [[<C-\><C-n><C-W>l]], opts)
 			end
+
 			local opts = {
 				size = 15,
 				open_mapping = [[<c-\>]],

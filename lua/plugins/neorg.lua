@@ -130,6 +130,10 @@ return {
 						cf = "~/notes/n-cf",
 						linux = "~/notes/n-linux",
 						projects = "~/notes/n-projects",
+						algo = "~/notes/n-algo",
+						ds = "~/notes/n-ds",
+						dbms = "~/notes/n-dbms",
+						math = "~/notes/n-math",
 						["42"] = "~/notes/n-42",
 					},
 					default_workspace = nil, -- doing this is best as it puts us in workspace of current dir
