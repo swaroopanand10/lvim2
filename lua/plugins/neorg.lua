@@ -115,7 +115,7 @@ return {
 						tj = "~/tj",
 						cprg = "~/notes/n-cprg",
 						cppprg = "~/notes/n-cppprg",
-						networking = "~/notes/n-networking",
+						cn = "~/notes/n-cn",
 						comparch = "~/notes/n-comparch",
 						computing = "~/notes/n-computing",
 						rs = "~/notes/n-rs",
@@ -134,6 +134,9 @@ return {
 						ds = "~/notes/n-ds",
 						dbms = "~/notes/n-dbms",
 						math = "~/notes/n-math",
+						cg = "~/notes/n-cg",
+						sdl = "~/notes/n-sdl",
+						opengl = "~/notes/n-opengl",
 						["42"] = "~/notes/n-42",
 					},
 					default_workspace = nil, -- doing this is best as it puts us in workspace of current dir

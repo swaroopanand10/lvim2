@@ -12,18 +12,18 @@ return { --Tip - check the default bindings before setting them unneccesarily
 	},
 	keys = {
 		-- some telescope bindings
-    {
-        '<leader>.',
-        '<cmd>Telescope current_buffer_fuzzy_find<cr>',
-        desc = 'curbuf fuzzy find',
-    },
+		{
+			"<leader>.",
+			"<cmd>Telescope current_buffer_fuzzy_find<cr>",
+			desc = "curbuf fuzzy find",
+		},
 		{ -- will search for normal files in cwd
 			"<leader>jf",
 			"<cmd>lua require('telescope.builtin').find_files({hidden=false})<cr>",
 			silent = true,
 			desc = "find normal files in curdir",
 		},
-		{-- will search for all including hidden files in cwd
+		{ -- will search for all including hidden files in cwd
 			"<leader>ja",
 			"<cmd>lua require('telescope.builtin').find_files({hidden=true})<cr>",
 			silent = true,
