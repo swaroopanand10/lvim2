@@ -56,9 +56,11 @@ return {
 	-- { -- not working
 	-- 	"Apeiros-46B/qalc.nvim",
 	-- 	cmd = "Qalc",
-	-- 	opts = {
-	-- 		cmd_args = { "--set", "fr 5", "--set", "appr 3" }, -- this is working
-	-- 	},
+	-- 	config = function()
+	-- 		require("qalc").setup({
+	-- 			-- cmd_args = { "--set", "fr 5", "--set", "appr 3" }, -- this is working
+	-- 		})
+	-- 	end,
 	-- },
 
 	{

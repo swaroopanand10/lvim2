@@ -137,6 +137,7 @@ return {
 						cg = "~/notes/n-cg",
 						sdl = "~/notes/n-sdl",
 						opengl = "~/notes/n-opengl",
+						scratchpad = "~/notes/n-scratchpad",
 						["42"] = "~/notes/n-42",
 					},
 					default_workspace = nil, -- doing this is best as it puts us in workspace of current dir
