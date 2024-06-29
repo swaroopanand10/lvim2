@@ -38,7 +38,11 @@ return {
 				-- local black = "#000000"
 				-- local blue = "#52b0ef"
 				-- local purple = "#fca7ea"
+
 				local fg_color = "#E0DEF4"
+				-- local fg_color = "#CACACA"
+				-- local fg_color = "#F8F8F2"
+
 				hl.TreesitterContext = {
 					bg = dark,
 				}
@@ -96,6 +100,7 @@ return {
 				hl.Delimiter = { fg = fg_color } --   Character that needs attention
 				hl.SpecialComment = { fg = fg_color } --   Special things inside a comment (e.g. '\n')
 				hl.Debug = { fg = fg_color } --   Debugging statements
+				hl["@lsp"] = { fg = fg_color }
 				hl["@keyword"] = { link = "Keyword" }
 				hl["@variable"] = { link = "Identifier" }
  				hl["@function"] = { link = "Function" }
@@ -107,6 +112,16 @@ return {
 				hl["@property"] = { link = "@variable" }
 				hl["@constructor"] = { link = "Function" }
 				hl["@lsp.typemod.type.defaultLibrary"] = { link = "Type" }
+				hl["@lsp.type.interface"] = { link = "Type" }
+				hl["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "Type" }
+				hl["@lsp.type.variable"] = { link = "Variable" }
+				hl["@operator"] = { link = "Operator" }
+				hl["@lsp.type.formatSpecifier"] = { link = "Operator" }
+				hl["@lsp.type.escapeSequence"] = { link = "Operator" }
+				hl["@string.escape"] = { link = "String" }
+				hl["@punctuation.delimiter"] = { link = "String" }
+        hl.TelescopeMatching = { fg = "#27a1b9"}
+
 			end,
 		},
 	},

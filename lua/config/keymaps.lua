@@ -10,6 +10,7 @@ map("i", "kj", "<Esc>", opts)
 
 -- Switching to last buffer
 map("n", "<C-b>", "<C-6>", opts)
+map("i", "<C-b>", "<cmd>e #<cr>", opts)
 
 -- Paste only last yanked text keybinds
 map("n", "yp", '"0p', opts)
