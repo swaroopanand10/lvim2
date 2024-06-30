@@ -1,13 +1,6 @@
 return {
 	{
-		"vhyrro/luarocks.nvim",
-		-- priority = 1001, -- this plugin needs to run before anything else
-		opts = {
-			rocks = { "magick" },
-		},
-	},
-	{
-		"3rd/image.nvim",
+		"3rd/image.nvim", -- To make it work install package 'lua51' which lua-5.1.5-11
 		dependencies = { "luarocks.nvim" },
 		ft = { "norg", "markdown" },
 		opts = {
