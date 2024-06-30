@@ -18,7 +18,12 @@ return {
 			end
 		end,
 	},
-
+	{
+		"nvim-lspconfig",
+		opts = {
+			inlay_hints = { enabled = false },
+		},
+	},
 	{
 		"kosayoda/nvim-lightbulb",
 		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
