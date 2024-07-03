@@ -64,63 +64,63 @@ return {
 				hl.WinBar = { fg = "#ffffff" } -- Window bar of current window
 				hl.WinBarNC = { fg = "#ffffff" } -- Window bar of not-current windows
 
-				-- Here I modified all the hightlights to make the text full white
-				hl.Constant = { fg = fg_color } -- (*) Any constant
-				hl.String = { fg = fg_color } --   A string constant: "this is a string"
-				hl.Character = { fg = fg_color } --   A character constant: 'c', '\n'
-				hl.Number = { fg = fg_color } --   A number constant: 234, 0xff
-				hl.Boolean = { fg = fg_color } --   A boolean constant: TRUE, false
-				hl.Float = { fg = fg_color } --   A floating point constant: 2.3e10
-
-				hl.Identifier = { fg = fg_color } -- (*) Any variable name
-				hl.Function = { fg = fg_color } --   Function name (also: methods for classes)
-
-				hl.Statement = { fg = fg_color } -- (*) Any statement
-				hl.Conditional = { fg = fg_color } --   if, then, else, endif, switch, etc.
-				hl.Repeat = { fg = fg_color } --   for, do, while, etc.
-				hl.Label = { fg = fg_color } --   case, default, etc.
-				hl.Operator = { fg = fg_color } --   "sizeof", "+", "*", etc.
-				hl.Keyword = { fg = fg_color } --   any other keyword
-				hl.Exception = { fg = fg_color } --   try, catch, throw
-
-				hl.PreProc = { fg = fg_color } -- (*) Generic Preprocessor
-				hl.Include = { fg = fg_color } --   Preprocessor #include
-				hl.Define = { fg = fg_color } --   Preprocessor #define
-				hl.Macro = { fg = fg_color } --   Same as Define
-				hl.PreCondit = { fg = fg_color } --   Preprocessor #if, #else, #endif, etc.
-
-				hl.Type = { fg = fg_color } -- (*) int, long, char, etc.
-				hl.StorageClass = { fg = fg_color } --   static, register, volatile, etc.
-				hl.Structure = { fg = fg_color } --   struct, union, enum, etc.
-				hl.Typedef = { fg = fg_color } --   A typedef
-
-				hl.Special = { fg = fg_color } -- (*) Any special symbol
-				hl.SpecialChar = { fg = fg_color } --   Special character in a constant
-				hl.Tag = { fg = fg_color } --   You can use CTRL-] on this
-				hl.Delimiter = { fg = fg_color } --   Character that needs attention
-				hl.SpecialComment = { fg = fg_color } --   Special things inside a comment (e.g. '\n')
-				hl.Debug = { fg = fg_color } --   Debugging statements
-				hl["@lsp"] = { fg = fg_color }
-				hl["@keyword"] = { link = "Keyword" }
-				hl["@variable"] = { link = "Identifier" }
- 				hl["@function"] = { link = "Function" }
-				hl["@type.builtin"] = { link = "@keyword" }
-				hl["@keyword.function"] = { link = "@keyword" }
-				hl["@variable.builtin"] = { link = "@variable" }
-				hl["@variable.member"] = { link = "@variable" }
-				hl["@variable.parameter"] = { link = "@variable" }
-				hl["@property"] = { link = "@variable" }
-				hl["@constructor"] = { link = "Function" }
-				hl["@lsp.typemod.type.defaultLibrary"] = { link = "Type" }
-				hl["@lsp.type.interface"] = { link = "Type" }
-				hl["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "Type" }
-				hl["@lsp.type.variable"] = { link = "Variable" }
-				hl["@operator"] = { link = "Operator" }
-				hl["@lsp.type.formatSpecifier"] = { link = "Operator" }
-				hl["@lsp.type.escapeSequence"] = { link = "Operator" }
-				hl["@string.escape"] = { link = "String" }
-				hl["@punctuation.delimiter"] = { link = "String" }
-        hl.TelescopeMatching = { fg = "#27a1b9"}
+				-- -- Here I modified all the hightlights to make the text full white
+				-- hl.Constant = { fg = fg_color } -- (*) Any constant
+				-- hl.String = { fg = fg_color } --   A string constant: "this is a string"
+				-- hl.Character = { fg = fg_color } --   A character constant: 'c', '\n'
+				-- hl.Number = { fg = fg_color } --   A number constant: 234, 0xff
+				-- hl.Boolean = { fg = fg_color } --   A boolean constant: TRUE, false
+				-- hl.Float = { fg = fg_color } --   A floating point constant: 2.3e10
+				--
+				-- hl.Identifier = { fg = fg_color } -- (*) Any variable name
+				-- hl.Function = { fg = fg_color } --   Function name (also: methods for classes)
+				--
+				-- hl.Statement = { fg = fg_color } -- (*) Any statement
+				-- hl.Conditional = { fg = fg_color } --   if, then, else, endif, switch, etc.
+				-- hl.Repeat = { fg = fg_color } --   for, do, while, etc.
+				-- hl.Label = { fg = fg_color } --   case, default, etc.
+				-- hl.Operator = { fg = fg_color } --   "sizeof", "+", "*", etc.
+				-- hl.Keyword = { fg = fg_color } --   any other keyword
+				-- hl.Exception = { fg = fg_color } --   try, catch, throw
+				--
+				-- hl.PreProc = { fg = fg_color } -- (*) Generic Preprocessor
+				-- hl.Include = { fg = fg_color } --   Preprocessor #include
+				-- hl.Define = { fg = fg_color } --   Preprocessor #define
+				-- hl.Macro = { fg = fg_color } --   Same as Define
+				-- hl.PreCondit = { fg = fg_color } --   Preprocessor #if, #else, #endif, etc.
+				--
+				-- hl.Type = { fg = fg_color } -- (*) int, long, char, etc.
+				-- hl.StorageClass = { fg = fg_color } --   static, register, volatile, etc.
+				-- hl.Structure = { fg = fg_color } --   struct, union, enum, etc.
+				-- hl.Typedef = { fg = fg_color } --   A typedef
+				--
+				-- hl.Special = { fg = fg_color } -- (*) Any special symbol
+				-- hl.SpecialChar = { fg = fg_color } --   Special character in a constant
+				-- hl.Tag = { fg = fg_color } --   You can use CTRL-] on this
+				-- hl.Delimiter = { fg = fg_color } --   Character that needs attention
+				-- hl.SpecialComment = { fg = fg_color } --   Special things inside a comment (e.g. '\n')
+				-- hl.Debug = { fg = fg_color } --   Debugging statements
+				-- hl["@lsp"] = { fg = fg_color }
+				-- hl["@keyword"] = { link = "Keyword" }
+				-- hl["@variable"] = { link = "Identifier" }
+				-- 	hl["@function"] = { link = "Function" }
+				-- hl["@type.builtin"] = { link = "@keyword" }
+				-- hl["@keyword.function"] = { link = "@keyword" }
+				-- hl["@variable.builtin"] = { link = "@variable" }
+				-- hl["@variable.member"] = { link = "@variable" }
+				-- hl["@variable.parameter"] = { link = "@variable" }
+				-- hl["@property"] = { link = "@variable" }
+				-- hl["@constructor"] = { link = "Function" }
+				-- hl["@lsp.typemod.type.defaultLibrary"] = { link = "Type" }
+				-- hl["@lsp.type.interface"] = { link = "Type" }
+				-- hl["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "Type" }
+				-- hl["@lsp.type.variable"] = { link = "Variable" }
+				-- hl["@operator"] = { link = "Operator" }
+				-- hl["@lsp.type.formatSpecifier"] = { link = "Operator" }
+				-- hl["@lsp.type.escapeSequence"] = { link = "Operator" }
+				-- hl["@string.escape"] = { link = "String" }
+				-- hl["@punctuation.delimiter"] = { link = "String" }
+				--     hl.TelescopeMatching = { fg = "#27a1b9"}
 
 			end,
 		},

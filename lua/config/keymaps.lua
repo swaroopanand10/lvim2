@@ -9,8 +9,9 @@ map("i", "jk", "<Esc>", opts)
 map("i", "kj", "<Esc>", opts)
 
 -- Switching to last buffer
-map("n", "<C-b>", "<C-6>", opts)
-map("i", "<C-b>", "<cmd>e #<cr>", opts)
+map("n", "<A-b>", "<C-6>", opts)
+map("i", "<A-b>", "<cmd>e #<cr>", opts)
+-- map("i", "<C-b>", "<cmd>e #<cr>", opts) -- collides with the cmp keybinds
 
 -- Paste only last yanked text keybinds
 map("n", "yp", '"0p', opts)
@@ -34,6 +35,9 @@ map({ "n", "v", "x" }, "gh", "^", { desc = "Beginning of line" })
 
 -- Stopping lsp
 map("n", "<leader>jL", "<cmd>LspStop<cr>", { desc = "stop lsp", silent = true })
+
+-- Set wrap for all windows
+map("n", "<leader>jW", "<cmd>windo set wrap<cr>", { desc = "set wrap on all windows", silent = true })
 
 -- Finding about the directories info
 map("n", "<leader>jl", "<cmd>LazyRoot<cr>", { desc = "lazyroot command", silent = true })
