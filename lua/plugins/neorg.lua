@@ -4,7 +4,7 @@ return {
 		{ "nvim-lua/plenary.nvim" },
 		{ "nvim-neorg/neorg-telescope" },
 		{ "nvim-telescope/telescope.nvim" },
-		{ "vhyrro/luarocks.nvim" },
+		-- { "vhyrro/luarocks.nvim" },
 		{
 			"hrsh7th/nvim-cmp", -- adding neorg to source table of cmp
 			opts = function(_, opts)

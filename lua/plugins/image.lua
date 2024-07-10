@@ -1,7 +1,9 @@
 return {
 	{
 		"3rd/image.nvim", -- To make it work install package 'lua51' which lua-5.1.5-11
-		dependencies = { "luarocks.nvim" },
+		-- dependencies = { "vhyrro/luarocks.nvim", opts = { -- will remove it soon
+		-- 	rocks = { "magick" },
+		-- } },
 		ft = { "norg", "markdown" },
 		opts = {
 			backend = "kitty",
