@@ -12,6 +12,7 @@ return {
 			end,
 		},
 	},
+  version = "*", -- Pin Neorg to the latest stable release
 	keys = {
 		{
 			"<leader>in",

@@ -90,42 +90,39 @@ return {
 		"folke/which-key.nvim",
 		optional = true,
 		opts = {
-			triggers_blacklist = {
-				i = { "j" },
-				v = { "j", "k", "l" },
-				n = { "k", "l", "j" },
-				x = { "k", "l", "j" },
-				o = { "k", "l", "j" },
-			},
+			-- triggers_blacklist = {
+			-- 	i = { "j" },
+			-- 	v = { "j", "k", "l" },
+			-- 	n = { "k", "l", "j" },
+			-- 	x = { "k", "l", "j" },
+			-- 	o = { "k", "l", "j" },
+			-- },
 
-			defaults = {
-				["<leader>k"] = { name = "+fzflua" },
-				["<leader>j"] = { name = "+extra" },
-				["<leader>jw"] = { name = "+windowpick" },
-				["<leader>jn"] = { name = "+compitest" },
-				["<leader>jm"] = { name = "+multicursors" },
-				["<leader>h"] = { name = "+harpoon" },
-				["<leader>i"] = { name = "+neorg" },
-				["<leader>jy"] = {
-					name = "Yank",
-					f = { "<cmd>%y+<cr>", "Copy Whole File" },
-					r = {
-						function()
-							local path = vim.fn.expand("%")
-							vim.fn.setreg("+", path)
-							vim.notify('Copied "' .. path .. '" to the clipboard!')
-						end,
-						"Copy Relative Path",
-					},
-					p = {
-						function()
-							local path = vim.fn.expand("%:p")
-							vim.fn.setreg("+", path)
-							vim.notify('Copied "' .. path .. '" to the clipboard!')
-						end,
-						"Copy Absolute Path",
-					},
-					-- g = { '<cmd>lua require"gitlinker".get_buf_range_url()<cr>', "Copy Git URL" },
+			spec = {
+				{ "<leader>h", group = "harpoon" },
+				{ "<leader>i", group = "neorg" },
+				{ "<leader>j", group = "extra" },
+				{ "<leader>jm", group = "multicursors" },
+				{ "<leader>jn", group = "compitest" },
+				{ "<leader>jw", group = "windowpick" },
+				{ "<leader>jy", group = "Yank" },
+				{
+					"<leader>jyp",
+					function()
+						local path = vim.fn.expand("%:p")
+						vim.fn.setreg("+", path)
+						vim.notify('Copied "' .. path .. '" to the clipboard!')
+					end,
+					desc = "Copy Absolute Path",
+				},
+				{
+					"<leader>jyr",
+					function()
+						local path = vim.fn.expand("%")
+						vim.fn.setreg("+", path)
+						vim.notify('Copied "' .. path .. '" to the clipboard!')
+					end,
+					desc = "Copy Relative Path",
 				},
 			},
 		},
