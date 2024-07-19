@@ -1,5 +1,5 @@
 {
-  "LazyVim": { "branch": "main", "commit": "9eefc6a3aaeb1a0742e676ba32c6963d649d3ca9" },
+  "LazyVim": { "branch": "main", "commit": "0daa957b3c8e672c9608bda7cd737cd8090adf80" },
   "LuaSnip": { "branch": "master", "commit": "ce0a05ab4e2839e1c48d072c5236cce846a387bc" },
   "SchemaStore.nvim": { "branch": "main", "commit": "2dedaa4d2eccee7d645b69b9f85a64bedd11d8a9" },
   "aerial.nvim": { "branch": "master", "commit": "db0af491ff13c18a966ce2f9ac7f5211aec000a7" },
@@ -82,7 +82,7 @@
   "vim-dadbod-completion": { "branch": "master", "commit": "c3a56c652af9367c5a7b658ed7ed4dc494f430b0" },
   "vim-dadbod-ui": { "branch": "master", "commit": "954877c3396ad4bf5624fcbe7b5673ac43cd0928" },
   "vim-table-mode": { "branch": "master", "commit": "e4365bde024f73e205eefa2fb78e3029ddb92ea9" },
-  "which-key.nvim": { "branch": "main", "commit": "0f581764dc2c89c0ac3d8363369152735ae265ab" },
+  "which-key.nvim": { "branch": "main", "commit": "8600b0029896ad2e36eb27a0808614ab8a0c057a" },
   "wrapping-paper.nvim": { "branch": "main", "commit": "56fa4f3757a29aab7c8ff60a53ae12ed591e4c52" },
   "yazi.nvim": { "branch": "master", "commit": "b9f393f6b76b68d8a55ed3a8d57419437f84e060" },
   "zen-mode.nvim": { "branch": "main", "commit": "21976479c7a0146b05a42707cf91c86b1e510945" }
