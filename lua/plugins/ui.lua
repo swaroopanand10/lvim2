@@ -137,8 +137,17 @@ return {
 				silent = true,
 				desc = "zenmode toggle",
 			},
+			{
+				"<A-c>",
+				"<cmd>:ZenMode<cr>",
+				silent = true,
+				desc = "zenmode toggle",
+			},
 		},
 		opts = {
+			-- window = {
+			-- width = 0.60,
+			-- },
 			plugins = {
 				-- disable some global vim options (vim.o...)
 				-- comment the lines to not apply the options
@@ -149,6 +158,7 @@ return {
 					-- you may turn on/off statusline in zen mode by setting 'laststatus'
 					-- statusline will be shown only if 'laststatus' == 3
 					laststatus = 0, -- turn off the statusline in zen mode
+					-- foldcolumn = "9", -- disable fold column
 				},
 				tmux = { enabled = true }, --seems that true value disables the tmux statusline
 				kitty = {
@@ -156,6 +166,13 @@ return {
 					font = "+4", -- font size increment
 				},
 			},
+			-- callback where you can add custom code when the Zen window opens
+			on_open = function(win)
+			     -- vim.cmd('set foldcolumn=9')
+			     vim.cmd('set signcolumn=yes:9')
+			end,
+			-- -- callback where you can add custom code when the Zen window closes
+			-- on_close = function() end,
 		},
 	},
 

@@ -84,8 +84,8 @@ return {
 		},
 		{
 			"<leader>ik",
-			"<cmd>:Neorg keybinds all<cr>",
-			-- "<Plug>(neorg.all)",
+			-- "<cmd>:Neorg keybinds all<cr>",
+			"<Plug>(neorg.all)",
 			silent = true,
 			desc = "Neorg keybind all",
 		},
