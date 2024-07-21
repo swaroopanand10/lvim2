@@ -12,13 +12,13 @@ return {
 			end,
 		},
 	},
-  version = "*", -- Pin Neorg to the latest stable release
+	-- version = "*", -- Pin Neorg to the latest stable release
 	keys = {
 		{
 			"<leader>in",
 			"<cmd>:Neorg<cr>",
 			silent = true,
-			desc = "neorg menu",
+			desc = "Neorg menu",
 		},
 		{
 			"<leader>ip",
@@ -84,19 +84,22 @@ return {
 		},
 		{
 			"<leader>ik",
-			"<cmd>:Neorg keybind all<cr>",
+			"<cmd>:Neorg keybinds all<cr>",
+			-- "<Plug>(neorg.all)",
 			silent = true,
 			desc = "Neorg keybind all",
 		},
 		{
 			"<leader>ie",
-			"<cmd>:Neorg keybind all core.integrations.telescope.insert_link<cr>",
+			-- "<Plug>(neorg.telescope.insert_link)",
+			":Telescope neorg insert_link<cr>",
 			silent = true,
 			desc = "insert link",
 		},
 		{
 			"<leader>ia",
-			"<cmd>:Neorg keybind all core.integrations.telescope.insert_file_link<cr>",
+			-- "<Plug>(neorg.telescope.insert_file_link)",
+			":Telescope neorg insert_file_link<cr>",
 			silent = true,
 			desc = "insert file link",
 		},
@@ -146,14 +149,27 @@ return {
 					-- open_last_workspace = true, -- not working
 				},
 			},
-			["core.integrations.telescope"] = {},
+			["core.integrations.telescope"] = {
+				config = {
+					insert_file_link = {
+						-- Whether to show the title preview in telescope. Affects performance with a large
+						-- number of files.
+						show_title_preview = true,
+					},
+				},
+			},
 			["core.completion"] = {
 				config = {
 					engine = "nvim-cmp",
 				},
 			},
+			["core.integrations.nvim-cmp"] = {},
 			["core.export"] = {},
-			["core.summary"] = {},
+			["core.summary"] = {
+				-- config = {
+				-- 	strategy = "by_path",
+				-- },
+			},
 			["core.ui"] = {},
 			["core.ui.calendar"] = {},
 		},
