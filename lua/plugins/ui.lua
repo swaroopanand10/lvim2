@@ -88,7 +88,7 @@ return {
 
 	{
 		"folke/which-key.nvim",
-		optional = true,
+		-- optional = true,
 		opts = {
 			-- triggers_blacklist = {
 			-- 	i = { "j" },
@@ -102,6 +102,7 @@ return {
 				{ "<leader>h", group = "harpoon" },
 				{ "<leader>i", group = "neorg" },
 				{ "<leader>j", group = "extra" },
+				{ "<leader>j", group = "fzf-lua" },
 				{ "<leader>jm", group = "multicursors" },
 				{ "<leader>jn", group = "compitest" },
 				{ "<leader>jw", group = "windowpick" },
