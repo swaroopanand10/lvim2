@@ -9,6 +9,7 @@ return { --Tip - check the default bindings before setting them unneccesarily
 			version = "^1.0.0",
 		},
 		"debugloop/telescope-undo.nvim",
+		"jonarrien/telescope-cmdline.nvim",
 	},
 	keys = {
 		-- some telescope bindings
@@ -60,6 +61,9 @@ return { --Tip - check the default bindings before setting them unneccesarily
 		-- 	"<cmd>DevdocsOpenCurrent<cr>",
 		-- 	desc = "devdocs opencurrent",
 		-- },
+
+		-- cmdline keybinds
+		{ "<leader>jg", "<cmd>Telescope cmdline<cr>", desc = "Cmdline" },
 	},
 	opts = function(_, opts)
 		local actions = require("telescope.actions")
@@ -114,6 +118,19 @@ return { --Tip - check the default bindings before setting them unneccesarily
 					width = 0.98,
 					preview_cutoff = 10,
 					preview_height = 0.55,
+				},
+			},
+			cmdline = {
+				picker = {
+					layout_config = {
+						width = 120,
+						height = 25,
+					},
+				},
+				mappings = {
+					complete = "<Tab>",
+					run_selection = "<C-CR>",
+					run_input = "<CR>",
 				},
 			},
 		})
